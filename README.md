@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Sem van Wijk
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  Rood
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  Surface plane
  
 </details>
 
@@ -37,13 +37,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je opdracht:
   link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  Marvel home: https://www.marvel.com/
+  Marvel Characters: https://www.marvel.com/characters
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
+  Home 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
+  Characters 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
  
 </details>
@@ -57,7 +59,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
-
+  - afbeeldingen zijn gelinked als een link terwijl er al een link voor dat onderdeel is, waardoor er dubbele links zijn
+  - De datums van wanneer bepaalde artikelen zijn geplaatst worden opgelezen
+  - Meerder keren word er naar "Marvel Insider" gelinked met alleen de tekst "join now" of "login" zonder dat de gebruiker weet wat het is
+  - screenreader heeft moeite om door de draaiende carousel heen te komen
+  - Op de chacters pagina leest de screenreader de superheldennaam van het personage, en daarna de naam van de persoon zonder pauze te nemen, waardoor het klinkt alsof iedereen een heel lange naam heeft.
+  - Filter opties worden niet uitgelegd, alleen dat er een filter is
 </details>
 
 
