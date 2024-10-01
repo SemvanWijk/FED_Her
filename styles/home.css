@@ -1,11 +1,13 @@
 section:nth-of-type(1) ul{
 	/* display: flex; */
 	position: relative;
+   
 }
 
 section:nth-of-type(1) ul li{
 	display: flex;
 	flex-direction: column;
+    width: 100%;
 }
 
 section:nth-of-type(1) ul li a{
