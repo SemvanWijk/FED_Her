@@ -1,5 +1,6 @@
+
+/* Eerste sectie met doorklikbare carousel */
 section:nth-of-type(1) ul{
-	/* display: flex; */
 	position: relative;
    
 }
@@ -42,7 +43,7 @@ section:nth-of-type(1) ul li img {
 
 
 
-
+/* Tweede sectie met slider */
 
 section:nth-of-type(2) ul {
 	display: flex;
@@ -53,14 +54,19 @@ section:nth-of-type(2) ul {
 	scroll-snap-type: x mandatory;
 	width: 100%;
 	gap: 1.2em;
+    /* Ruitme tussen de elementen en de scroll balk  */
+    padding-bottom:2em ;
 }
 
+
+/* Carousel scroll balk */
 section:nth-of-type(2) ul::-webkit-scrollbar {
 	height: 0.2em;
 	width: 0;
 	background-color: whitesmoke;
 }
 
+/* Carousel scroll balk Slider */
 section:nth-of-type(2) ul::-webkit-scrollbar-thumb {
 	background-color: #e62429;
 
@@ -76,7 +82,6 @@ section:nth-of-type(2) ul li {
 section:nth-of-type(2) ul li p:first-of-type {
 	font-size: 14px;
 	font-weight: bold;
-	top: 10em;
 }
 
 section:nth-of-type(2) ul li p:last-of-type {
