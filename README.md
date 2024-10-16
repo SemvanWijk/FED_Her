@@ -101,20 +101,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Sem     | Sam        | Bronger   | Nina        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Coorecte hemtl structuur  | Hoe ver moet ik zijn?             | css prooblemen    | css problemen    |
+  |  |  |  |  |
+  |             |             |          |            |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Paar kleine foutjes in de html structuur, verder alles in orde
+  - 
+  - 
+  - 
 
 </details>
 
@@ -134,20 +134,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Sem      | Sam        | Bronger   | Nina        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Hoe voeg je ruimte toe tussen de scrollbar en het de content   | geen vragen           |    |    |
+  |  |  |  |  |
+  |            |                |          |              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Moet meer css schrijven, maar verder is het prima
+  - Met padding kan ik die ruimte toevoegen. Dit is een situatie waar padding oke is om te gebruiken.
+  - 
+- 
 
 </details>
 
@@ -181,11 +181,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Sem     | Sam          | Bronger    | Nina       |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Hoe haal ik de radiobuttons weg en waarom doet foto het niet?  |             |     |     |
+  | Hoe maak ik goude lijnen rondom tekst? |  |  |  |
+  | Is logo animatie nodig bij het sticky menu?            |                 |           |               |
 
 
   ### Verslag van meeting

@@ -1,30 +1,29 @@
-
 /* Eerste sectie met doorklikbare carousel */
-section:nth-of-type(1) ul{
-	position: relative;
-   
+section:nth-of-type(1) ul {
+    position: relative;
+
 }
 
-section:nth-of-type(1) ul li{
-	display: flex;
-	flex-direction: column;
+section:nth-of-type(1) ul li {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
-section:nth-of-type(1) ul li a{
-	padding: 1em;
-	background-color: #e62429;
-	transform: skewX(-20deg);
-	width: 10em;
-	overflow: hidden;
-	text-decoration:none;
-	display: inline-block;
+section:nth-of-type(1) ul li a {
+    padding: 1em;
+    background-color: #e62429;
+    transform: skewX(-20deg);
+    width: 10em;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
 }
 
 section:nth-of-type(1) ul li img {
-	width: 100%;
-	height: auto;
-	order: -1;
+    width: 100%;
+    height: auto;
+    order: -1;
 }
 
 
@@ -46,53 +45,53 @@ section:nth-of-type(1) ul li img {
 /* Tweede sectie met slider */
 
 section:nth-of-type(2) ul {
-	display: flex;
-	padding: 0;
-	list-style-type: none;
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
-	width: 100%;
-	gap: 1.2em;
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    gap: 1.2em;
     /* Ruitme tussen de elementen en de scroll balk  */
-    padding-bottom:2em ;
+    padding-bottom: 2em;
 }
 
 
 /* Carousel scroll balk */
 section:nth-of-type(2) ul::-webkit-scrollbar {
-	height: 0.2em;
-	width: 0;
-	background-color: whitesmoke;
+    height: 0.2em;
+    width: 0;
+    background-color: whitesmoke;
 }
 
 /* Carousel scroll balk Slider */
 section:nth-of-type(2) ul::-webkit-scrollbar-thumb {
-	background-color: #e62429;
+    background-color: #e62429;
 
 }
 
 section:nth-of-type(2) ul li {
-	display: flex;
-	flex-direction: column;
-	scroll-snap-align: start;
-	gap: 1em;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    gap: 1em;
 }
 
 section:nth-of-type(2) ul li p:first-of-type {
-	font-size: 14px;
-	font-weight: bold;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 section:nth-of-type(2) ul li p:last-of-type {
-	font: 'RobotoCondensed';
-	font-size: 12px;
-	font-weight: bold;
+    font: 'RobotoCondensed';
+    font-size: 12px;
+    font-weight: bold;
 }
 
 section:nth-of-type(2) ul li img {
-	width: 10em;
-	height: auto;
-	order: -1;
+    width: 10em;
+    height: auto;
+    order: -1;
 }
 
 
@@ -114,17 +113,17 @@ section:nth-of-type(3) ul li {
     gap: 1em;
 }
 
-section:nth-of-type(3) ul p:nth-of-type(2){
+section:nth-of-type(3) ul p:nth-of-type(2) {
     order: -4;
-    
-    
+
+
 }
 
 
 section:nth-of-type(3) ul li img {
-	width: 100%;
-	height: auto;
-	order: -5;
+    width: 100%;
+    height: auto;
+    order: -5;
 }
 
 
@@ -144,51 +143,177 @@ section:nth-of-type(3) ul li img {
 /* Carousel scroll balk */
 
 section:nth-of-type(4) img {
-	width: 100%;
-	height: auto;
-	order: -10;
+    width: 100%;
+    height: auto;
+    order: -10;
 }
 
 section:nth-of-type(4) ul {
-	display: flex;
+    display: flex;
     list-style-type: none;
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     gap: 0.5em;
 }
 
 section:nth-of-type(4) ul::-webkit-scrollbar {
-	height: 0.2em;
-	width: 0;
-	background-color: whitesmoke;
+    height: 0.2em;
+    width: 0;
+    background-color: whitesmoke;
 }
 
 /* Carousel scroll balk Slider */
 section:nth-of-type(4) ul::-webkit-scrollbar-thumb {
-	background-color: #e62429;
+    background-color: #e62429;
 
 }
 
 section:nth-of-type(4) ul li {
-	display: flex;
-	flex-direction: column;
-	scroll-snap-align: start;
-	gap: 1em;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    gap: 1em;
 }
 
 section:nth-of-type(4) ul li p:first-of-type {
-	font-size: 14px;
-	font-weight: bold;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 section:nth-of-type(4) ul li p:last-of-type {
-	font: 'RobotoCondensed';
-	font-size: 12px;
-	font-weight: bold;
+    font: 'RobotoCondensed';
+    font-size: 12px;
+    font-weight: bold;
 }
 
 section:nth-of-type(4) ul li img {
-	width: 10em;
-	height: auto;
-	order: -1;
+    width: 10em;
+    height: auto;
+    order: -1;
+}
+
+
+section:nth-of-type(5) {
+    margin-top: 3em;
+}
+
+
+section:nth-of-type(5) img {
+    width: 5em;
+    height: auto;
+}
+
+
+
+
+
+
+section:nth-of-type(5) ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    gap: 1.2em;
+    padding-bottom: 2em;
+}
+
+section:nth-of-type(5) li {
+    min-width: 150px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 10px;
+    scroll-snap-align: start;
+}
+
+/* Target content outside the ul (in the section itself) */
+
+/* Option 1 */
+section:nth-of-type(5):has(li:nth-child(1) input:checked)>h3::before {
+    content: "MARVEL vs. CAPCOM Fighting Collection: Arcade Classics | Launch Trailer";
+}
+
+section:nth-of-type(5):has(li:nth-child(1) input:checked)>p:nth-of-type(1)::before {
+    content: "Gonna take you for a ride back to the arcades with MARVEL vs. CAPCOM Fighting Collection: Arcade Classics!  7 legendary games, all in one Super Heroic collection, available NOW on Nintendo Switch, PlayStation 4 and Steam! Xbox One version coming 2025.";
+}
+
+section:nth-of-type(5):has(li:nth-child(1) input:checked)>p:nth-of-type(2)::before {
+    content: "Trailers & Extras";
+}
+
+section:nth-of-type(5):has(li:nth-child(1) input:checked)>img {
+    content: url("./images/placeholder.png");
+}
+
+/* Option 2 */
+section:nth-of-type(5):has(li:nth-child(2) input:checked)>h3::before {
+    content: "Option 2 Title";
+}
+
+section:nth-of-type(5):has(li:nth-child(2) input:checked)>p:nth-of-type(1)::before {
+    content: "Option 2 Description 1";
+}
+
+section:nth-of-type(5):has(li:nth-child(2) input:checked)>p:nth-of-type(2)::before {
+    content: "Option 2 Description 2";
+}
+
+section:nth-of-type(5):has(li:nth-child(2) input:checked)>img {
+    content: url("./images/placeholder.png");
+}
+
+/* Option 3 */
+section:nth-of-type(5):has(li:nth-child(3) input:checked)>h3::before {
+    content: "Option 3 Title";
+}
+
+section:nth-of-type(5):has(li:nth-child(3) input:checked)>p:nth-of-type(1)::before {
+    content: "Option 3 Description 1";
+}
+
+section:nth-of-type(5):has(li:nth-child(3) input:checked)>p:nth-of-type(2)::before {
+    content: "Option 3 Description 2";
+}
+
+section:nth-of-type(5):has(li:nth-child(3) input:checked)>img {
+    content: url("./images/placeholder.png");
+}
+
+/* Option 4 */
+section:nth-of-type(5):has(li:nth-child(4) input:checked)>h3::before {
+    content: "Option 4 Title";
+}
+
+section:nth-of-type(5):has(li:nth-child(4) input:checked)>p:nth-of-type(1)::before {
+    content: "Option 4 Description 1";
+}
+
+section:nth-of-type(5):has(li:nth-child(4) input:checked)>p:nth-of-type(2)::before {
+    content: "Option 4 Description 2";
+}
+
+section:nth-of-type(5):has(li:nth-child(4) input:checked)>img {
+    content: url("./images/placeholder.png");
+}
+
+/* Option 5 */
+section:nth-of-type(5):has(li:nth-child(5) input:checked)>h3::before {
+    content: "Option 5 Title";
+}
+
+section:nth-of-type(5):has(li:nth-child(5) input:checked)>p:nth-of-type(1)::before {
+    content: "Option 5 Description 1";
+}
+
+section:nth-of-type(5):has(li:nth-child(5) input:checked)>p:nth-of-type(2)::before {
+    content: "Option 5 Description 2";
+}
+
+section:nth-of-type(5):has(li:nth-child(5) input:checked)>img {
+    content: url("./images/placeholder.png");
 }
