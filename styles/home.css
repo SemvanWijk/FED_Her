@@ -1,6 +1,19 @@
 /* Eerste sectie met doorklikbare carousel */
+section ul {
+    width: 100%;
+}
+
 section:nth-of-type(1) ul {
     position: relative;
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+	overflow-y: hidden;
+    scroll-snap-type: inline;
+    scroll-behavior: smooth;
+    overscroll-behavior: contain auto;
+
+    width: 100%;
 
 }
 
@@ -8,6 +21,9 @@ section:nth-of-type(1) ul li {
     display: flex;
     flex-direction: column;
     width: 100%;
+    flex-shrink: 0;
+	flex-grow:1;
+    scroll-snap-align:center;
 }
 
 section:nth-of-type(1) ul li a {
@@ -93,10 +109,6 @@ section:nth-of-type(2) ul li img {
     height: auto;
     order: -1;
 }
-
-
-
-
 
 
 
@@ -224,6 +236,24 @@ section:nth-of-type(5) li {
     border: 1px solid #ccc;
     padding: 10px;
     scroll-snap-align: start;
+}
+
+section:nth-of-type(5) input[type="radio"] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+section:nth-of-type(5) label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
 }
 
 /* Option 1 */
