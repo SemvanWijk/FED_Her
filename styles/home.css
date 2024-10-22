@@ -1,8 +1,4 @@
 /* Eerste sectie met doorklikbare carousel */
-section ul {
-    width: 100%;
-}
-
 section:nth-of-type(1) ul {
     position: relative;
     display: flex;
@@ -154,18 +150,25 @@ section:nth-of-type(3) ul li img {
 
 /* Carousel scroll balk */
 
+section:nth-of-type(4) {
+    margin-top: 3em;
+}
+
+
 section:nth-of-type(4) img {
-    width: 100%;
+    width: 5em;
     height: auto;
-    order: -10;
 }
 
 section:nth-of-type(4) ul {
     display: flex;
+    padding: 0;
     list-style-type: none;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 0.5em;
+    width: 100%;
+    gap: 1.2em;
+    padding-bottom: 2em;
 }
 
 section:nth-of-type(4) ul::-webkit-scrollbar {
@@ -180,53 +183,7 @@ section:nth-of-type(4) ul::-webkit-scrollbar-thumb {
 
 }
 
-section:nth-of-type(4) ul li {
-    display: flex;
-    flex-direction: column;
-    scroll-snap-align: start;
-    gap: 1em;
-}
-
-section:nth-of-type(4) ul li p:first-of-type {
-    font-size: 14px;
-    font-weight: bold;
-}
-
-section:nth-of-type(4) ul li p:last-of-type {
-    font: 'RobotoCondensed';
-    font-size: 12px;
-    font-weight: bold;
-}
-
-section:nth-of-type(4) ul li img {
-    width: 10em;
-    height: auto;
-    order: -1;
-}
-
-
-section:nth-of-type(5) {
-    margin-top: 3em;
-}
-
-
-section:nth-of-type(5) img {
-    width: 5em;
-    height: auto;
-}
-
-section:nth-of-type(5) ul {
-    display: flex;
-    padding: 0;
-    list-style-type: none;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    width: 100%;
-    gap: 1.2em;
-    padding-bottom: 2em;
-}
-
-section:nth-of-type(5) li {
+section:nth-of-type(4) li {
     min-width: 150px;
     flex-shrink: 0;
     display: flex;
@@ -238,7 +195,7 @@ section:nth-of-type(5) li {
     scroll-snap-align: start;
 }
 
-section:nth-of-type(5) input[type="radio"] {
+section:nth-of-type(4) input[type="radio"] {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -248,7 +205,7 @@ section:nth-of-type(5) input[type="radio"] {
     width: 1px;
 }
 
-section:nth-of-type(5) label {
+section:nth-of-type(4) label {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -257,86 +214,86 @@ section:nth-of-type(5) label {
 }
 
 /* Option 1 */
-section:nth-of-type(5):has(li:nth-child(1) input:checked)>h3::before {
+section:nth-of-type(4):has(li:nth-child(1) input:checked)>h3::before {
     content: "MARVEL vs. CAPCOM Fighting Collection: Arcade Classics | Launch Trailer";
 }
 
-section:nth-of-type(5):has(li:nth-child(1) input:checked)>p:nth-of-type(1)::before {
+section:nth-of-type(4):has(li:nth-child(1) input:checked)>p:nth-of-type(1)::before {
     content: "Gonna take you for a ride back to the arcades with MARVEL vs. CAPCOM Fighting Collection: Arcade Classics!  7 legendary games, all in one Super Heroic collection, available NOW on Nintendo Switch, PlayStation 4 and Steam! Xbox One version coming 2025.";
 }
 
-section:nth-of-type(5):has(li:nth-child(1) input:checked)>p:nth-of-type(2)::before {
+section:nth-of-type(4):has(li:nth-child(1) input:checked)>p:nth-of-type(2)::before {
     content: "Trailers & Extras";
 }
 
-section:nth-of-type(5):has(li:nth-child(1) input:checked)>img {
+section:nth-of-type(4):has(li:nth-child(1) input:checked)>img {
     content: url("./images/placeholder.png");
 }
 
 /* Option 2 */
-section:nth-of-type(5):has(li:nth-child(2) input:checked)>h3::before {
+section:nth-of-type(4):has(li:nth-child(2) input:checked)>h3::before {
     content: "Option 2 Title";
 }
 
-section:nth-of-type(5):has(li:nth-child(2) input:checked)>p:nth-of-type(1)::before {
+section:nth-of-type(4):has(li:nth-child(2) input:checked)>p:nth-of-type(1)::before {
     content: "Option 2 Description 1";
 }
 
-section:nth-of-type(5):has(li:nth-child(2) input:checked)>p:nth-of-type(2)::before {
+section:nth-of-type(4):has(li:nth-child(2) input:checked)>p:nth-of-type(2)::before {
     content: "Option 2 Description 2";
 }
 
-section:nth-of-type(5):has(li:nth-child(2) input:checked)>img {
+section:nth-of-type(4):has(li:nth-child(2) input:checked)>img {
     content: url("./images/placeholder.png");
 }
 
 /* Option 3 */
-section:nth-of-type(5):has(li:nth-child(3) input:checked)>h3::before {
+section:nth-of-type(4):has(li:nth-child(3) input:checked)>h3::before {
     content: "Option 3 Title";
 }
 
-section:nth-of-type(5):has(li:nth-child(3) input:checked)>p:nth-of-type(1)::before {
+section:nth-of-type(4):has(li:nth-child(3) input:checked)>p:nth-of-type(1)::before {
     content: "Option 3 Description 1";
 }
 
-section:nth-of-type(5):has(li:nth-child(3) input:checked)>p:nth-of-type(2)::before {
+section:nth-of-type(4):has(li:nth-child(3) input:checked)>p:nth-of-type(2)::before {
     content: "Option 3 Description 2";
 }
 
-section:nth-of-type(5):has(li:nth-child(3) input:checked)>img {
+section:nth-of-type(4):has(li:nth-child(3) input:checked)>img {
     content: url("./images/placeholder.png");
 }
 
 /* Option 4 */
-section:nth-of-type(5):has(li:nth-child(4) input:checked)>h3::before {
+section:nth-of-type(4):has(li:nth-child(4) input:checked)>h3::before {
     content: "Option 4 Title";
 }
 
-section:nth-of-type(5):has(li:nth-child(4) input:checked)>p:nth-of-type(1)::before {
+section:nth-of-type(4):has(li:nth-child(4) input:checked)>p:nth-of-type(1)::before {
     content: "Option 4 Description 1";
 }
 
-section:nth-of-type(5):has(li:nth-child(4) input:checked)>p:nth-of-type(2)::before {
+section:nth-of-type(4):has(li:nth-child(4) input:checked)>p:nth-of-type(2)::before {
     content: "Option 4 Description 2";
 }
 
-section:nth-of-type(5):has(li:nth-child(4) input:checked)>img {
+section:nth-of-type(4):has(li:nth-child(4) input:checked)>img {
     content: url("./images/placeholder.png");
 }
 
 /* Option 5 */
-section:nth-of-type(5):has(li:nth-child(5) input:checked)>h3::before {
+section:nth-of-type(4):has(li:nth-child(5) input:checked)>h3::before {
     content: "Option 5 Title";
 }
 
-section:nth-of-type(5):has(li:nth-child(5) input:checked)>p:nth-of-type(1)::before {
+section:nth-of-type(4):has(li:nth-child(5) input:checked)>p:nth-of-type(1)::before {
     content: "Option 5 Description 1";
 }
 
-section:nth-of-type(5):has(li:nth-child(5) input:checked)>p:nth-of-type(2)::before {
+section:nth-of-type(4):has(li:nth-child(5) input:checked)>p:nth-of-type(2)::before {
     content: "Option 5 Description 2";
 }
 
-section:nth-of-type(5):has(li:nth-child(5) input:checked)>img {
+section:nth-of-type(4):has(li:nth-child(5) input:checked)>img {
     content: url("./images/placeholder.png");
 }
