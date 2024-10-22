@@ -129,6 +129,7 @@ section:nth-of-type(3) ul {
 }
 
 section:nth-of-type(3) ul li {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding-bottom: 1em;
@@ -143,8 +144,10 @@ section:nth-of-type(3) ul p:nth-of-type(2) {
 }
 
 
-section:nth-of-type(3) ul li img {
-    width: 100%;
+section:nth-of-type(3) img {
+    position: static;
+    left: 20em;
+    width: 80%;
     height: auto;
     order: -5;
 }
