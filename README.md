@@ -191,9 +191,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - Radio buttons weg met een label
+  - Goude lijnen zijn een before en een after
+  - Logo animatie is niet nodig
   - ...
 
 </details>
