@@ -1,6 +1,6 @@
 /* Eerste sectie met doorklikbare carousel */
 
-section:nth-of-type(1){
+section:nth-of-type(1) {
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -11,38 +11,44 @@ section:nth-of-type(1) ul {
     display: flex;
     overflow: hidden;
     overflow-x: scroll;
-	overflow-y: hidden;
+    overflow-y: hidden;
     scroll-snap-type: inline;
     scroll-behavior: smooth;
     overscroll-behavior: contain auto;
-
-    width: 100%;
 
 }
 
 section:nth-of-type(1) ul li {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: 100%;
     flex-shrink: 0;
-	flex-grow:1;
-    scroll-snap-align:center;
+    flex-grow: 1;
+    scroll-snap-align: center;
 }
 
 section:nth-of-type(1) ul li a {
     padding: 1em;
     background-color: #e62429;
     transform: skewX(-20deg);
-    width: 10em;
+    width: 150px;
     overflow: hidden;
     text-decoration: none;
     display: inline-block;
 }
 
-section:nth-of-type(1) ul li img {
-    width: 100%;
+section:nth-of-type(1) ul li img:nth-of-type(1) {
     height: auto;
-    order: -1;
+    order: -10;
+    overflow: hidden;
+
+}
+
+section:nth-of-type(1) ul li img:nth-of-type(2) {
+    height: auto;
+    order: -5;
+    overflow: hidden;
+
 }
 
 
@@ -69,7 +75,6 @@ section:nth-of-type(2) ul {
     list-style-type: none;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    width: 100%;
     gap: 1.2em;
     /* Ruitme tussen de elementen en de scroll balk  */
     padding-bottom: 2em;
@@ -102,9 +107,10 @@ section:nth-of-type(2) ul li p:first-of-type {
 }
 
 section:nth-of-type(2) ul li p:last-of-type {
-    font: 'RobotoCondensed';
-    font-size: 12px;
-    font-weight: bold;
+    font-family: var(--sub-text-font-family);
+    color: var(--sub-text-color);
+    font-size: var(--sub-text-size);
+    font-weight: var(--sub-text-weight);
 }
 
 section:nth-of-type(2) ul li img {
@@ -128,8 +134,13 @@ section:nth-of-type(2) ul li img {
 
 
 
+section:nth-of-type(3) {
+    padding: 0 2em;
+}
 
-
+section:nth-of-type(3) h2 {
+    position: relative;
+}
 
 section:nth-of-type(3) ul {
     display: block;
@@ -139,25 +150,46 @@ section:nth-of-type(3) ul li {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-bottom: 1em;
-    border-bottom: 0.1em solid silver;
+    padding-bottom: 3em;
     gap: 1em;
 }
 
-section:nth-of-type(3) ul p:nth-of-type(2) {
-    order: -4;
-
-
+/* Maakt de lijn van de linker naar de rechter kant van de list onder de content */
+section:nth-of-type(3) ul li::after {
+    content: "";
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    bottom: 1em;
+    border-bottom: 0.1em solid #bbbbbb; 
 }
 
+section:nth-of-type(3) ul li h3 {
+    position: relative; 
+    font-family: var(--main-text-font-family);
+    color: var(--main-text-color);
+    font-size: var(--main-text-size);
+    font-weight: var(--main-text-weight);
+}
+
+section:nth-of-type(3) ul li p {
+    order: -4; 
+    position: relative; 
+    font-family: var(--sub-text-font-family);
+    color: var(--sub-text-color);
+    font-size: var(--sub-text-size);
+    font-weight: var(--sub-text-weight);
+    letter-spacing: var(--sub-text-spacing);
+    text-transform: uppercase;
+}
 
 section:nth-of-type(3) img {
-    position: static;
-    left: 20em;
-    width: 80%;
+    position: relative; 
+    width: 100%;
     height: auto;
     order: -5;
 }
+
 
 
 
@@ -191,7 +223,6 @@ section:nth-of-type(4) ul {
     list-style-type: none;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    width: 100%;
     gap: 1.2em;
     padding-bottom: 2em;
 }
@@ -209,7 +240,6 @@ section:nth-of-type(4) ul::-webkit-scrollbar-thumb {
 }
 
 section:nth-of-type(4) li {
-    min-width: 150px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -235,7 +265,6 @@ section:nth-of-type(4) label {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    width: 100%;
 }
 
 /* Option 1 */
