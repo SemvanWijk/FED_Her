@@ -158,14 +158,14 @@ section:nth-of-type(3) ul li {
 section:nth-of-type(3) ul li::after {
     content: "";
     position: absolute;
-    left: 0; 
-    right: 0; 
+    left: 0;
+    right: 0;
     bottom: 1em;
-    border-bottom: 0.1em solid #bbbbbb; 
+    border-bottom: 0.1em solid #bbbbbb;
 }
 
 section:nth-of-type(3) ul li h3 {
-    position: relative; 
+    position: relative;
     font-family: var(--main-text-font-family);
     color: var(--main-text-color);
     font-size: var(--main-text-size);
@@ -173,8 +173,8 @@ section:nth-of-type(3) ul li h3 {
 }
 
 section:nth-of-type(3) ul li p {
-    order: -4; 
-    position: relative; 
+    order: -4;
+    position: relative;
     font-family: var(--sub-text-font-family);
     color: var(--sub-text-color);
     font-size: var(--sub-text-size);
@@ -184,7 +184,7 @@ section:nth-of-type(3) ul li p {
 }
 
 section:nth-of-type(3) img {
-    position: relative; 
+    position: relative;
     width: 100%;
     height: auto;
     order: -5;
@@ -203,17 +203,13 @@ section:nth-of-type(3) img {
 
 
 
-
-
-/* Carousel scroll balk */
-
 section:nth-of-type(4) {
     margin-top: 3em;
+    padding: 0 1em;
 }
 
-
 section:nth-of-type(4) img {
-    width: 5em;
+    width: 100%;
     height: auto;
 }
 
@@ -225,18 +221,16 @@ section:nth-of-type(4) ul {
     scroll-snap-type: x mandatory;
     gap: 1.2em;
     padding-bottom: 2em;
+    margin: 0;
 }
 
 section:nth-of-type(4) ul::-webkit-scrollbar {
     height: 0.2em;
-    width: 0;
     background-color: whitesmoke;
 }
 
-/* Carousel scroll balk Slider */
 section:nth-of-type(4) ul::-webkit-scrollbar-thumb {
     background-color: #e62429;
-
 }
 
 section:nth-of-type(4) li {
@@ -246,8 +240,14 @@ section:nth-of-type(4) li {
     align-items: center;
     cursor: pointer;
     border: 1px solid #ccc;
-    padding: 10px;
-    scroll-snap-align: start;
+    max-width: 125px;
+}
+
+section:nth-of-type(4) li p {
+    font-family: var(--thumbnail-text-font-family);
+    color: var(--thumbnail-text-color);
+    font-size: var(--thumbnail-text-size);
+    font-weight: var(--thumbnail-text-weight);
 }
 
 section:nth-of-type(4) input[type="radio"] {
@@ -267,87 +267,39 @@ section:nth-of-type(4) label {
     cursor: pointer;
 }
 
-/* Option 1 */
-section:nth-of-type(4):has(li:nth-child(1) input:checked)>h3::before {
-    content: "MARVEL vs. CAPCOM Fighting Collection: Arcade Classics | Launch Trailer";
+section:nth-of-type(4) input[type="radio"]:checked+label {
+    background-color: green;
+    color: white;
+
 }
 
-section:nth-of-type(4):has(li:nth-child(1) input:checked)>p:nth-of-type(1)::before {
-    content: "Gonna take you for a ride back to the arcades with MARVEL vs. CAPCOM Fighting Collection: Arcade Classics!  7 legendary games, all in one Super Heroic collection, available NOW on Nintendo Switch, PlayStation 4 and Steam! Xbox One version coming 2025.";
+section:nth-of-type(4) .content {
+    display: none;
 }
 
-section:nth-of-type(4):has(li:nth-child(1) input:checked)>p:nth-of-type(2)::before {
-    content: "Trailers & Extras";
+
+
+section:nth-of-type(4):has(input#option1:checked) .content1,
+section:nth-of-type(4):has(input#option1:checked) h3 {
+    display: block;
 }
 
-section:nth-of-type(4):has(li:nth-child(1) input:checked)>img {
-    content: url("./images/placeholder.png");
+section:nth-of-type(4):has(input#option2:checked) .content2,
+section:nth-of-type(4):has(input#option2:checked) h3 {
+    display: block;
 }
 
-/* Option 2 */
-section:nth-of-type(4):has(li:nth-child(2) input:checked)>h3::before {
-    content: "Option 2 Title";
+section:nth-of-type(4):has(input#option3:checked) .content3,
+section:nth-of-type(4):has(input#option3:checked) h3 {
+    display: block;
 }
 
-section:nth-of-type(4):has(li:nth-child(2) input:checked)>p:nth-of-type(1)::before {
-    content: "Option 2 Description 1";
+section:nth-of-type(4):has(input#option4:checked) .content4,
+section:nth-of-type(4):has(input#option4:checked) h3 {
+    display: block;
 }
 
-section:nth-of-type(4):has(li:nth-child(2) input:checked)>p:nth-of-type(2)::before {
-    content: "Option 2 Description 2";
-}
-
-section:nth-of-type(4):has(li:nth-child(2) input:checked)>img {
-    content: url("./images/placeholder.png");
-}
-
-/* Option 3 */
-section:nth-of-type(4):has(li:nth-child(3) input:checked)>h3::before {
-    content: "Option 3 Title";
-}
-
-section:nth-of-type(4):has(li:nth-child(3) input:checked)>p:nth-of-type(1)::before {
-    content: "Option 3 Description 1";
-}
-
-section:nth-of-type(4):has(li:nth-child(3) input:checked)>p:nth-of-type(2)::before {
-    content: "Option 3 Description 2";
-}
-
-section:nth-of-type(4):has(li:nth-child(3) input:checked)>img {
-    content: url("./images/placeholder.png");
-}
-
-/* Option 4 */
-section:nth-of-type(4):has(li:nth-child(4) input:checked)>h3::before {
-    content: "Option 4 Title";
-}
-
-section:nth-of-type(4):has(li:nth-child(4) input:checked)>p:nth-of-type(1)::before {
-    content: "Option 4 Description 1";
-}
-
-section:nth-of-type(4):has(li:nth-child(4) input:checked)>p:nth-of-type(2)::before {
-    content: "Option 4 Description 2";
-}
-
-section:nth-of-type(4):has(li:nth-child(4) input:checked)>img {
-    content: url("./images/placeholder.png");
-}
-
-/* Option 5 */
-section:nth-of-type(4):has(li:nth-child(5) input:checked)>h3::before {
-    content: "Option 5 Title";
-}
-
-section:nth-of-type(4):has(li:nth-child(5) input:checked)>p:nth-of-type(1)::before {
-    content: "Option 5 Description 1";
-}
-
-section:nth-of-type(4):has(li:nth-child(5) input:checked)>p:nth-of-type(2)::before {
-    content: "Option 5 Description 2";
-}
-
-section:nth-of-type(4):has(li:nth-child(5) input:checked)>img {
-    content: url("./images/placeholder.png");
+section:nth-of-type(4):has(input#option5:checked) .content5,
+section:nth-of-type(4):has(input#option5:checked) h3 {
+    display: block;
 }

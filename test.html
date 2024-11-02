@@ -5,153 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carousel Example</title>
     <style>
-        /* styles for the carousel */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: white; /* White background for the page */
-            color: black; /* Black text for general content */
-        }
-        *{
-            list-style-type:none;
+            width: 320px; /* Set viewport width */
+            margin: 0 auto; /* Hide horizontal overflow */
         }
 
-        .carousel {
-            position: relative;
+        /* Hide the header */
+        .visually-hidden {
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1px;
             overflow: hidden;
-            width: 100%;
-            height: 300px; /* Adjust as needed */
-            margin: 20px 0; /* Add some margin above and below */
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
         }
 
-        .carousel-content {
-            display: none; /* Hide all items by default */
-            padding: 20px;
-            text-align: center;
-            background-color: black; /* Black background for content */
-            color: white; /* White text for content */
-            border: 1px solid #444; /* Dark border for better visibility */
-            border-radius: 5px; /* Rounded corners */
-            position: absolute; /* Ensure items are stacked */
-            top: 0; /* Align to the top */
-            left: 0; /* Align to the left */
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+        /* Carousel styles */
+        section {
+            margin-top: 3em;
+            padding: 0 1em; /* Add horizontal padding to the section */
         }
 
-        /* Show the selected content */
-        input[type="radio"]:checked + label + .carousel-content {
-            display: block; /* Show the selected content */
+        section img {
+            width: 5em;
+            height: auto;
         }
 
-        /* Hide the input radio buttons */
-        input[type="radio"] {
-            display: none;
-        }
-
-        .carousel-nav {
+        section ul {
             display: flex;
-            justify-content: center;
-            margin-top: 10px;
+            padding: 0;
+            list-style-type: none;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 1.2em;
+            padding-bottom: 2em;
+            margin: 0; /* Remove default margin */
         }
 
-        .tab-button {
-            width: 20px;
-            height: 5px;
-            margin: 0 5px;
-            background-color: black; /* Black tab buttons */
+        section ul::-webkit-scrollbar {
+            height: 0.2em;
+            background-color: whitesmoke;
+        }
+
+        section ul::-webkit-scrollbar-thumb {
+            background-color: #e62429;
+        }
+
+        section li {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             cursor: pointer;
-            border-radius: 3px; /* Rounded corners for buttons */
-            opacity: 0.5;
-            transition: opacity 0.3s ease;
+            border: 1px solid #ccc;
+            padding: 10px;
+            scroll-snap-align: start;
         }
 
-        /* Change the style of the selected tab */
-        input[type="radio"]:checked + label {
-            background-color: red; /* Active tab color */
-            opacity: 1; /* Fully visible */
+        section input[type="radio"] {
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
         }
 
-        /* Style for the Read More button */
-        .button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background-color: red; /* Button background */
-            color: white; /* Button text color */
-            text-decoration: none; /* Remove underline */
-            border-radius: 5px; /* Rounded corners */
-            transition: background-color 0.3s ease;
+        section label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
         }
 
-        /* Button hover effect */
-        .button:hover {
-            background-color: darkred; /* Darker red on hover */
+        /* Hidden content */
+        .content {
+            display: none; /* Hide all content by default */
+        }
+
+        /* Show content based on the selected radio button using :has */
+        section:has(input#option1:checked) .content1,
+        section:has(input#option1:checked) h3 {
+            display: block; /* Show content for Option 1 */
+        }
+        
+        section:has(input#option2:checked) .content2,
+        section:has(input#option2:checked) h3 {
+            display: block; /* Show content for Option 2 */
+        }
+
+        section:has(input#option3:checked) .content3,
+        section:has(input#option3:checked) h3 {
+            display: block; /* Show content for Option 3 */
+        }
+
+        section:has(input#option4:checked) .content4,
+        section:has(input#option4:checked) h3 {
+            display: block; /* Show content for Option 4 */
+        }
+
+        section:has(input#option5:checked) .content5,
+        section:has(input#option5:checked) h3 {
+            display: block; /* Show content for Option 5 */
         }
     </style>
 </head>
 <body>
-    <div class="carousel">
-        <!-- Radio buttons for each item -->
-        <input type="radio" name="carousel" id="item1" checked>
-        <label for="item1" class="tab-button"></label>
-        <ul class="carousel-content">
-            <li>
-                <h2>Item 1 Title</h2>
-                <p>Description for item 1.</p>
-                <a href="#" class="button">Read More</a>
-            </li>
-        </ul>
 
-        <input type="radio" name="carousel" id="item2">
-        <label for="item2" class="tab-button"></label>
-        <ul class="carousel-content">
-            <li>
-                <h2>Item 2 Title</h2>
-                <p>Description for item 2.</p>
-                <a href="#" class="button">Read More</a>
-            </li>
-        </ul>
+<section>
+    <h2 class="visually-hidden">Trailers and Extras</h2>
 
-        <input type="radio" name="carousel" id="item3">
-        <label for="item3" class="tab-button"></label>
-        <ul class="carousel-content">
-            <li>
-                <h2>Item 3 Title</h2>
-                <p>Description for item 3.</p>
-                <a href="#" class="button">Read More</a>
-            </li>
-        </ul>
-
-        <input type="radio" name="carousel" id="item4">
-        <label for="item4" class="tab-button"></label>
-        <ul class="carousel-content">
-            <li>
-                <h2>Item 4 Title</h2>
-                <p>Description for item 4.</p>
-                <a href="#" class="button">Read More</a>
-            </li>
-        </ul>
-
-        <input type="radio" name="carousel" id="item5">
-        <label for="item5" class="tab-button"></label>
-        <ul class="carousel-content">
-            <li>
-                <h2>Item 5 Title</h2>
-                <p>Description for item 5.</p>
-                <a href="#" class="button">Read More</a>
-            </li>
-        </ul>
+    <!-- Content for each option in separate divs -->
+    <div class="content content1">
+        <h3>h3 Option 1</h3>
+        <p>p1 Option 1</p>
+        <img src="./images/placeholder.png" alt="placeholder">
+    </div>
+    
+    <div class="content content2">
+        <h3>h3 Option 2</h3>
+        <p>p1 Option 2</p>
+        <img src="./images/placeholder.png" alt="placeholder">
+    </div>
+    
+    <div class="content content3">
+        <h3>h3 Option 3</h3>
+        <p>p1 Option 3</p>
+        <img src="./images/placeholder.png" alt="placeholder">
+    </div>
+    
+    <div class="content content4">
+        <h3>h3 Option 4</h3>
+        <p>p1 Option 4</p>
+        <img src="./images/placeholder.png" alt="placeholder">
+    </div>
+    
+    <div class="content content5">
+        <h3>h3 Option 5</h3>
+        <p>p1 Option 5</p>
+        <img src="./images/placeholder.png" alt="placeholder">
     </div>
 
-    <div class="carousel-nav">
-        <label for="item1" class="tab-button"></label>
-        <label for="item2" class="tab-button"></label>
-        <label for="item3" class="tab-button"></label>
-        <label for="item4" class="tab-button"></label>
-        <label for="item5" class="tab-button"></label>
-    </div>
+    <ul>
+        <li>
+            <input type="radio" name="carousel" id="option1" checked>
+            <label for="option1">
+                <p>Option 1</p>
+                <img src="./images/placeholder.png" alt="placeholder">
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="carousel" id="option2">
+            <label for="option2">
+                <p>Option 2</p>
+                <img src="./images/placeholder.png" alt="placeholder">
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="carousel" id="option3">
+            <label for="option3">
+                <p>Option 3</p>
+                <img src="./images/placeholder.png" alt="placeholder">
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="carousel" id="option4">
+            <label for="option4">
+                <p>Option 4</p>
+                <img src="./images/placeholder.png" alt="placeholder">
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="carousel" id="option5">
+            <label for="option5">
+                <p>Option 5</p>
+                <img src="./images/placeholder.png" alt="placeholder">
+            </label>
+        </li>
+    </ul>
+</section>
+
 </body>
 </html>

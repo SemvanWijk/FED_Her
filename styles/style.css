@@ -29,7 +29,7 @@
 	--sub-text-color: #767676;
 	--sub-text-size: 14px;
 	--sub-text-weight: 600;
-	--sub-text-spacing:1px;
+	--sub-text-spacing: 1px;
 
 	--main-text-font-family: 'Roboto', sans-serif;
 	--main-text-color: #151515;
@@ -40,6 +40,12 @@
 	--h2-text-color: #202020;
 	--h2-text-size: 1.625em;
 	--h2-text-weight: 500;
+
+	--thumbnail-text-font-family: 'Roboto', sans-serif;
+	--thumbnail-text-color: #000000;
+	--thumbnail-text-size: 0.6875em;
+	/* 11px rounded to 0.6875em */
+	--thumbnail-text-weight: bold;
 
 
 
@@ -135,6 +141,6 @@ section {
 	margin-bottom: 4em;
 }
 
-img:hover{
+img:hover {
 	cursor: pointer;
 }
