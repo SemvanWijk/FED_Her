@@ -1,4 +1,11 @@
 /* Eerste sectie met doorklikbare carousel */
+
+section:nth-of-type(1){
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
 section:nth-of-type(1) ul {
     position: relative;
     display: flex;
@@ -101,7 +108,7 @@ section:nth-of-type(2) ul li p:last-of-type {
 }
 
 section:nth-of-type(2) ul li img {
-    width: 10em;
+    width: 11em;
     height: auto;
     order: -1;
 }
