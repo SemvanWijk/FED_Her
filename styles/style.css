@@ -24,6 +24,12 @@
 	--section-background: #181414;
 	--text-color: white;
 
+
+	--sec1-text-font-family: 'Roboto Condensed', sans-serif;
+	--sec1-text-color: white;
+	--sec1-text-size: 1.5em;
+	--sec1-text-weight: 600;
+
 	--sub-text-font-family: 'Roboto Condensed', sans-serif;
 	--sub-text-color: #767676;
 	--sub-text-size: 14px;

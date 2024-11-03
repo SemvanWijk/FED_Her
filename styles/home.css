@@ -31,8 +31,20 @@ section:nth-of-type(1)>ul li {
     gap: 1em;
 }
 
-section:nth-of-type(1)>ul li p{
+section:nth-of-type(1)>ul li h3 {
+    font-family: var(--sec1-text-font-family);
+    color: var(--sec1-text-color);
+    font-size: var(--sec1-text-size);
+    font-weight: var(--sec1-text-weight);
+    text-transform: uppercase;
+    padding: 0 1em;
+}
+
+section:nth-of-type(1)>ul li p {
     position: relative;
+    padding: 0 2em;
+    font-family: var(--main-text-font-family);
+    font-size: var(--sub-text-size);
 }
 
 section:nth-of-type(1)>ul li a {
@@ -46,7 +58,7 @@ section:nth-of-type(1)>ul li a {
     display: inline-block;
     position: relative;
     left: 2em;
-    text-align: center; 
+    text-align: center;
     display: inline-block;
     top: 2em;
 }
@@ -57,8 +69,9 @@ section:nth-of-type(1)>ul li img:nth-of-type(1) {
 }
 
 section:nth-of-type(1)>ul li img:nth-of-type(2) {
-    width: 80%;
+    width: 100%;
     order: -10;
+    padding: 0 2em;
 }
 
 section:nth-of-type(1) nav {
@@ -104,7 +117,7 @@ section:nth-of-type(1) nav a:hover {
 
 
 /* Tweede sectie met slider */
-section:nth-of-type(2){
+section:nth-of-type(2) {
     z-index: -9999;
 }
 
@@ -180,7 +193,7 @@ section:nth-of-type(2) section div {
     transform: skewX(-20deg) skewY(10deg);
     border: 1px solid white;
     width: 250px;
-    text-align: center; 
+    text-align: center;
     display: inline-block;
     position: relative;
     bottom: -2em;
