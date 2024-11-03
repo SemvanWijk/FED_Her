@@ -117,9 +117,6 @@ section:nth-of-type(1) nav a:hover {
 
 
 /* Tweede sectie met slider */
-section:nth-of-type(2) {
-    z-index: -9999;
-}
 
 section:nth-of-type(2) section {
     display: flex;
