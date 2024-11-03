@@ -1,148 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carousel Example</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full-Width Hamburger Menu</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            scroll-behavior: smooth;
+    body {
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
 
-        }
+    /* Header Styling */
+    header {
+      position: relative;
+      z-index: 1000;
+    }
 
-        img {
-            display: block;
-            width: 100%;
-        }
+    /* Hamburger Icon Styles */
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      margin: 10px;
+    }
 
-        section:nth-of-type(1) {
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-            background-color: #202020;
-            color: white;
-            width: 100%;
-        }
+    .hamburger div {
+      height: 4px;
+      background-color: #333;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
 
-        section:nth-of-type(1)>ul {
-            display: flex;
-            overflow: hidden;
-        }
+    /* Full-Width Sidebar Menu Styles */
+    .menu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      height: 100%;
+      width: 100%; /* Full-width */
+      background-color: #333;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      transition: left 0.3s ease;
+      z-index: 999;
+    }
 
-        section:nth-of-type(1)>ul li {
-            width: 100%;
-            flex-shrink: 0;
-            display: flex;
-            flex-direction: column;
-        }
+    .menu.active {
+      left: 0;
+    }
 
-        section:nth-of-type(1)>ul li a {
-            padding: 1em;
-            background-color: #e62429;
-            color: white;
-            transform: skewX(-20deg);
-            width: 150px;
-            overflow: hidden;
-            text-decoration: none;
-            display: inline-block;
-        }
+    /* Close Button Styles */
+    .close-btn {
+      align-self: flex-start; /* Aligns close button to the start (left) */
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+      margin-bottom: 20px;
+    }
 
-        section:nth-of-type(1)>ul li img {
-            width: 100%;
-            order: -10;
-        }
+    /* Menu Links */
+    .menu a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 0;
+      font-size: 18px;
+    }
 
-        section:nth-of-type(1) nav {
-            background-color: #f0f0f0;
-            order: -10;
-        }
-
-        section:nth-of-type(1) nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        section:nth-of-type(1) nav a {
-            display: block;
-            height: 10px;
-            background-color: white;
-            transition: background-color 0.3s;
-            border: 1px solid black;
-            border-radius: 10px;
-            width: 20px;
-        }
-
-        section:nth-of-type(1) nav a:hover {
-            background-color: red;
-        }
-    </style>
+    .menu a:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
-
 <body>
-    <section>
-        <ul>
-            <li id="a">
-                <h3>What's Next for the MCU on Disney+</h3>
-                <p>See footage from 'Daredevil: Born Again,' 'Ironheart,' 'Wonder Man,' and more.</p>
-                <a href="#">Watch now</a>
 
-                <img src="./images/look_ahead.jpg" alt="Collage of iconic Marvel images">
-            </li>
-            <li id="b">
-                <p> NetEase Games and Marvel Games announce their latest collaboration: MARVEL
-                    Mystic Mayhem, a mobile, free-to-play, Team-Based Tactical RPG set in the heart of the Marvel
-                    Universe!</p>
-                <a href="#">Watch now</a>
-                <a href="#">Read more</a>
-                <img src="./images/mayhem_mephisto.jpg"
-                    alt="Cover art for Mystic Mayhem, showing Mephisto and other characters">
-                <img src="./images/mystic_mayhem.png" alt="Mystic Mayhem logo">
-            </li>
-            <li id="c">
-                <h3>The Official Marvel Podcast</h3>
-                <p>Episode 7 of Agatha All Along was an experience, so we chatted with Sasheer Zamata and showrunner
-                    Jac Schaeffer all about it on this episode of The Official Marvel Podcast!</p>
-                <a href="#">Listen now on Youtube</a>
-                <a href="#">Subscribe</a>
-                <img src="./images/podcast.jpg" alt="logo for the official Marvel podcast">
-            </li>
-            <li id="d">
-                <h3>This Week's New Comics</h3>
-                <p>Witness the start of Spider-Man's next era, swing into 'Venom War' with the Fantastic Four, meet
-                    the Ultimate Universe's Children of the Atom, and more in this week's comics!</p>
-                <a href="#">Read more</a>
-                <img src="./images/spidey.jpg" alt="The Amazing Spiderman, surrounded by webs">
-            </li>
-            <li id="e">
-                <h3>2024 Marvel Unlimited Plus Member Kit</h3>
-                <p>Celebrating 85 years of Marvel, Thanks to you, True Believers.</p>
-                <a href="#">Learn more</a>
-                <img src="./images/member_kit.jpg"
-                    alt="Contents of the Marvel Unlimited member kit, including a figure, stickers and more">
-            </li>
-        </ul>
+  <!-- Header Section -->
+  <header>
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
 
-        <nav>
-            <ul>
-                <li><a href="#a"></a></li>
-                <li><a href="#b"></a></li>
-                <li><a href="#c"></a></li>
-                <li><a href="#d"></a></li>
-                <li><a href="#e"></a></li>
-            </ul>
-        </nav>
-    </section>
+    <!-- Full-Width Sidebar Menu -->
+    <div class="menu" id="menu">
+      <span class="close-btn" onclick="toggleMenu()">&times;</span>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </header>
+
+  <script>
+    // Toggle Menu Function
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+  </script>
+
 </body>
-
 </html>

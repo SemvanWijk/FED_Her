@@ -13,9 +13,38 @@
 <body>
     <header>
         <nav>
-            <h1>Marvel logo hier</h1>
-            <button>hamburger menu</button>
-            <a>Search icoon</a>
+            <h1>
+                <img src="./images/marvel-logo.svg">
+            </h1>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <!-- Full-Width Sidebar Menu -->
+            <div class="menu" id="menu">
+                <div class="close-btn" onclick="toggleMenu()">
+                    <!-- Close Button SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 24 24">
+                      <path d="M3 3l18 18M3 21L21 3" stroke="white" stroke-width="2" fill="none"/>
+                    </svg>
+                  </div>
+                <a href="#">News</a>
+                <a href="#">Comics</a>
+                <a href="#">Characters</a>
+                <a href="#">Movies</a>
+                <a href="#">Tv Shows</a>
+                <a href="#">Games</a>
+                <a href="#">Videos</a>
+                <a href="#">Lifestyle</a>
+                <a href="#">Role-Playing Game</a>
+                <a href="#">Books</a>
+                <a href="#">Podcasts</a>
+                <a href="#">Shop</a>
+
+            </div>
+            <a href="#"><img src="./images/searching.svg"></a>
         </nav>
 
 
@@ -28,7 +57,7 @@
                     <h3>What's Next for the MCU on Disney+</h3>
                     <p>See footage from 'Daredevil: Born Again,' 'Ironheart,' 'Wonder Man,' and more.</p>
                     <a href="#">Watch now</a>
-    
+
                     <img src="./images/look_ahead.jpg" alt="Collage of iconic Marvel images">
                 </li>
                 <li id="b">
@@ -64,7 +93,7 @@
                         alt="Contents of the Marvel Unlimited member kit, including a figure, stickers and more">
                 </li>
             </ul>
-    
+
             <nav>
                 <ul>
                     <li><a href="#a"></a></li>
@@ -274,6 +303,7 @@
     <footer>
 
     </footer>
+    <script src="./scripts/script.js"></script>
 </body>
 
 </html>
