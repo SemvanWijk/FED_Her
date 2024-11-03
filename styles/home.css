@@ -3,54 +3,88 @@
 section:nth-of-type(1) {
     background-color: var(--background-color);
     color: var(--text-color);
-    margin-bottom: 0;
+    margin-bottom: 10em;
     z-index: 100;
 }
 
 
-section:nth-of-type(1) ul {
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-snap-type: inline;
-    scroll-behavior: smooth;
-    overscroll-behavior: contain auto;
-
-}
-
-section:nth-of-type(1) ul li {
+section:nth-of-type(1) {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
-    flex-shrink: 0;
-    flex-grow: 1;
-    scroll-snap-align: center;
+    gap: 1em;
+    background-color: #202020;
+    color: white;
+    width: 100%;
 }
 
-section:nth-of-type(1) ul li a {
-    padding: 1em;
+section:nth-of-type(1)>ul {
+    display: flex;
+    overflow: hidden;
+}
+
+section:nth-of-type(1)>ul li {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1em;
+}
+
+section:nth-of-type(1)>ul li p{
+    position: relative;
+}
+
+section:nth-of-type(1)>ul li a {
+    padding: 0.75em 1em;
     background-color: #e62429;
+    color: white;
     transform: skewX(-20deg);
     width: 150px;
     overflow: hidden;
     text-decoration: none;
     display: inline-block;
+    position: relative;
+    left: 2em;
+    text-align: center; 
+    display: inline-block;
+    top: 2em;
 }
 
-section:nth-of-type(1) ul li img:nth-of-type(1) {
-    height: auto;
+section:nth-of-type(1)>ul li img:nth-of-type(1) {
+    width: 100%;
     order: -10;
-    overflow: hidden;
-
 }
 
-section:nth-of-type(1) ul li img:nth-of-type(2) {
-    height: auto;
-    order: -5;
-    overflow: hidden;
+section:nth-of-type(1)>ul li img:nth-of-type(2) {
+    width: 80%;
+    order: -10;
+}
 
+section:nth-of-type(1) nav {
+    background-color: #f0f0f0;
+}
+
+section:nth-of-type(1) nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+section:nth-of-type(1) nav a {
+    display: block;
+    height: 10px;
+    background-color: white;
+    transition: background-color 0.3s;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 20px;
+}
+
+section:nth-of-type(1) nav a:hover {
+    background-color: #e62429;
 }
 
 
@@ -103,7 +137,7 @@ section:nth-of-type(2) section h3 {
     position: relative;
     order: -5;
     font-family: var(--sub-text-font-family);
-    font-size: 14px;
+    font-size: var(--sub-text-size);
     font-weight: var(--sub-text-weight);
     margin-bottom: 2em;
     transform: skewy(10deg);

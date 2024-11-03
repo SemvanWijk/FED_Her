@@ -1,192 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carousel Example</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            width: 320px; /* Set viewport width */
-            margin: 0 auto; /* Hide horizontal overflow */
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* Hide the header */
-        .visually-hidden {
-            clip: rect(0 0 0 0);
-            clip-path: inset(50%);
-            height: 1px;
-            overflow: hidden;
-            position: absolute;
-            white-space: nowrap;
-            width: 1px;
-        }
-
-        /* Carousel styles */
-        section {
-            margin-top: 3em;
-            padding: 0 1em; /* Add horizontal padding to the section */
-        }
-
-        section img {
-            width: 5em;
-            height: auto;
-        }
-
-        section ul {
-            display: flex;
+        ul {
+            margin: 0;
             padding: 0;
-            list-style-type: none;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 1.2em;
-            padding-bottom: 2em;
-            margin: 0; /* Remove default margin */
+            list-style: none;
+            scroll-behavior: smooth;
+
         }
 
-        section ul::-webkit-scrollbar {
-            height: 0.2em;
-            background-color: whitesmoke;
+        img {
+            display: block;
+            width: 100%;
         }
 
-        section ul::-webkit-scrollbar-thumb {
-            background-color: #e62429;
+        section:nth-of-type(1) {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            background-color: #202020;
+            color: white;
+            width: 100%;
         }
 
-        section li {
+        section:nth-of-type(1)>ul {
+            display: flex;
+            overflow: hidden;
+        }
+
+        section:nth-of-type(1)>ul li {
+            width: 100%;
             flex-shrink: 0;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            cursor: pointer;
-            border: 1px solid #ccc;
-            padding: 10px;
-            scroll-snap-align: start;
         }
 
-        section input[type="radio"] {
-            clip: rect(0 0 0 0);
-            clip-path: inset(50%);
-            height: 1px;
+        section:nth-of-type(1)>ul li a {
+            padding: 1em;
+            background-color: #e62429;
+            color: white;
+            transform: skewX(-20deg);
+            width: 150px;
             overflow: hidden;
-            position: absolute;
-            white-space: nowrap;
-            width: 1px;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        section label {
+        section:nth-of-type(1)>ul li img {
+            width: 100%;
+            order: -10;
+        }
+
+        section:nth-of-type(1) nav {
+            background-color: #f0f0f0;
+            order: -10;
+        }
+
+        section:nth-of-type(1) nav ul {
+            list-style-type: none;
+            padding: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            cursor: pointer;
+            justify-content: center;
+            gap: 10px;
         }
 
-        /* Hidden content */
-        .content {
-            display: none; /* Hide all content by default */
+        section:nth-of-type(1) nav a {
+            display: block;
+            height: 10px;
+            background-color: white;
+            transition: background-color 0.3s;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 20px;
         }
 
-        /* Show content based on the selected radio button using :has */
-        section:has(input#option1:checked) .content1,
-        section:has(input#option1:checked) h3 {
-            display: block; /* Show content for Option 1 */
-        }
-        
-        section:has(input#option2:checked) .content2,
-        section:has(input#option2:checked) h3 {
-            display: block; /* Show content for Option 2 */
-        }
-
-        section:has(input#option3:checked) .content3,
-        section:has(input#option3:checked) h3 {
-            display: block; /* Show content for Option 3 */
-        }
-
-        section:has(input#option4:checked) .content4,
-        section:has(input#option4:checked) h3 {
-            display: block; /* Show content for Option 4 */
-        }
-
-        section:has(input#option5:checked) .content5,
-        section:has(input#option5:checked) h3 {
-            display: block; /* Show content for Option 5 */
+        section:nth-of-type(1) nav a:hover {
+            background-color: red;
         }
     </style>
 </head>
+
 <body>
+    <section>
+        <ul>
+            <li id="a">
+                <h3>What's Next for the MCU on Disney+</h3>
+                <p>See footage from 'Daredevil: Born Again,' 'Ironheart,' 'Wonder Man,' and more.</p>
+                <a href="#">Watch now</a>
 
-<section>
-    <h2 class="visually-hidden">Trailers and Extras</h2>
+                <img src="./images/look_ahead.jpg" alt="Collage of iconic Marvel images">
+            </li>
+            <li id="b">
+                <p> NetEase Games and Marvel Games announce their latest collaboration: MARVEL
+                    Mystic Mayhem, a mobile, free-to-play, Team-Based Tactical RPG set in the heart of the Marvel
+                    Universe!</p>
+                <a href="#">Watch now</a>
+                <a href="#">Read more</a>
+                <img src="./images/mayhem_mephisto.jpg"
+                    alt="Cover art for Mystic Mayhem, showing Mephisto and other characters">
+                <img src="./images/mystic_mayhem.png" alt="Mystic Mayhem logo">
+            </li>
+            <li id="c">
+                <h3>The Official Marvel Podcast</h3>
+                <p>Episode 7 of Agatha All Along was an experience, so we chatted with Sasheer Zamata and showrunner
+                    Jac Schaeffer all about it on this episode of The Official Marvel Podcast!</p>
+                <a href="#">Listen now on Youtube</a>
+                <a href="#">Subscribe</a>
+                <img src="./images/podcast.jpg" alt="logo for the official Marvel podcast">
+            </li>
+            <li id="d">
+                <h3>This Week's New Comics</h3>
+                <p>Witness the start of Spider-Man's next era, swing into 'Venom War' with the Fantastic Four, meet
+                    the Ultimate Universe's Children of the Atom, and more in this week's comics!</p>
+                <a href="#">Read more</a>
+                <img src="./images/spidey.jpg" alt="The Amazing Spiderman, surrounded by webs">
+            </li>
+            <li id="e">
+                <h3>2024 Marvel Unlimited Plus Member Kit</h3>
+                <p>Celebrating 85 years of Marvel, Thanks to you, True Believers.</p>
+                <a href="#">Learn more</a>
+                <img src="./images/member_kit.jpg"
+                    alt="Contents of the Marvel Unlimited member kit, including a figure, stickers and more">
+            </li>
+        </ul>
 
-    <!-- Content for each option in separate divs -->
-    <div class="content content1">
-        <h3>h3 Option 1</h3>
-        <p>p1 Option 1</p>
-        <img src="./images/placeholder.png" alt="placeholder">
-    </div>
-    
-    <div class="content content2">
-        <h3>h3 Option 2</h3>
-        <p>p1 Option 2</p>
-        <img src="./images/placeholder.png" alt="placeholder">
-    </div>
-    
-    <div class="content content3">
-        <h3>h3 Option 3</h3>
-        <p>p1 Option 3</p>
-        <img src="./images/placeholder.png" alt="placeholder">
-    </div>
-    
-    <div class="content content4">
-        <h3>h3 Option 4</h3>
-        <p>p1 Option 4</p>
-        <img src="./images/placeholder.png" alt="placeholder">
-    </div>
-    
-    <div class="content content5">
-        <h3>h3 Option 5</h3>
-        <p>p1 Option 5</p>
-        <img src="./images/placeholder.png" alt="placeholder">
-    </div>
-
-    <ul>
-        <li>
-            <input type="radio" name="carousel" id="option1" checked>
-            <label for="option1">
-                <p>Option 1</p>
-                <img src="./images/placeholder.png" alt="placeholder">
-            </label>
-        </li>
-        <li>
-            <input type="radio" name="carousel" id="option2">
-            <label for="option2">
-                <p>Option 2</p>
-                <img src="./images/placeholder.png" alt="placeholder">
-            </label>
-        </li>
-        <li>
-            <input type="radio" name="carousel" id="option3">
-            <label for="option3">
-                <p>Option 3</p>
-                <img src="./images/placeholder.png" alt="placeholder">
-            </label>
-        </li>
-        <li>
-            <input type="radio" name="carousel" id="option4">
-            <label for="option4">
-                <p>Option 4</p>
-                <img src="./images/placeholder.png" alt="placeholder">
-            </label>
-        </li>
-        <li>
-            <input type="radio" name="carousel" id="option5">
-            <label for="option5">
-                <p>Option 5</p>
-                <img src="./images/placeholder.png" alt="placeholder">
-            </label>
-        </li>
-    </ul>
-</section>
-
+        <nav>
+            <ul>
+                <li><a href="#a"></a></li>
+                <li><a href="#b"></a></li>
+                <li><a href="#c"></a></li>
+                <li><a href="#d"></a></li>
+                <li><a href="#e"></a></li>
+            </ul>
+        </nav>
+    </section>
 </body>
+
 </html>
