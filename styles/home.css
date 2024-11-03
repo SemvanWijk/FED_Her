@@ -192,16 +192,16 @@ section:nth-of-type(2) section img:last-of-type {
 
 section:nth-of-type(2) ul {
     display: flex;
-    padding: 0 2em;
+    padding: 0 2em 2em 2em;
     list-style-type: none;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 1.2em;
-    /* Ruitme tussen de elementen en de scroll balk  */
-    padding-bottom: 2em;
+    position: relative;
+    left: 1em;
+    right: 1em;
 
 }
-
 
 /* Carousel scroll balk */
 section:nth-of-type(2) ul::-webkit-scrollbar {
@@ -220,12 +220,15 @@ section:nth-of-type(2) ul li {
     display: flex;
     flex-direction: column;
     scroll-snap-align: start;
-    gap: 1em;
+    gap: 0.5em;
 }
 
 section:nth-of-type(2) ul li p:first-of-type {
-    font-size: 14px;
-    font-weight: bold;
+    font-family: var(--main-text-font-family);
+    color: var(--main-text-color);
+    font-size: var(--sub-text-size);
+    font-weight: var(--sub-text-weight);
+    letter-spacing: var(--sub-text-spacing);
 }
 
 section:nth-of-type(2) ul li p:last-of-type {
