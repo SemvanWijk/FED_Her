@@ -3,6 +3,8 @@
 section:nth-of-type(1) {
     background-color: var(--background-color);
     color: var(--text-color);
+    margin-bottom: 0;
+    z-index: 100;
 }
 
 
@@ -68,16 +70,136 @@ section:nth-of-type(1) ul li img:nth-of-type(2) {
 
 
 /* Tweede sectie met slider */
+section:nth-of-type(2){
+    z-index: -9999;
+}
+
+section:nth-of-type(2) section {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--section-background);
+    color: var(--text-color);
+    padding: 0 2em 6em 2em;
+    margin-bottom: 5em;
+    transform: skewy(-10deg);
+}
+
+section:nth-of-type(2) h2 {
+    color: var(--text-color);
+    position: relative;
+    transform: skewy(10deg);
+    margin: 0;
+    padding-bottom: 0.5em;
+    padding-top: 0.2em;
+}
+
+section:nth-of-type(2) section h2::before,
+section:nth-of-type(2) section h2::after {
+    display: none;
+    transform: skewy(10deg);
+}
+
+section:nth-of-type(2) section h3 {
+    position: relative;
+    order: -5;
+    font-family: var(--sub-text-font-family);
+    font-size: 14px;
+    font-weight: var(--sub-text-weight);
+    margin-bottom: 2em;
+    transform: skewy(10deg);
+    margin-top: 4em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+
+section:nth-of-type(2) section h3::before {
+    left: 53px;
+    top: -8px;
+    transform-origin: left bottom;
+}
+
+section:nth-of-type(2) section h3::after {
+    left: -6px;
+    top: calc(100% + 3px);
+    transform-origin: right top;
+}
+
+section:nth-of-type(2) section h3::before,
+section:nth-of-type(2) section h3::after {
+    background-color: #c6a972;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    transform: rotate(-45deg) skewX(45deg);
+    width: 30px;
+}
+
+section:nth-of-type(2) section p {
+    position: relative;
+    font-size: 16px;
+    transform: skewy(10deg);
+}
+
+section:nth-of-type(2) section div {
+    padding: 0.75em 1em;
+    transform: skewX(-20deg) skewY(10deg);
+    border: 1px solid white;
+    width: 250px;
+    text-align: center; 
+    display: inline-block;
+    position: relative;
+    bottom: -2em;
+}
+
+section:nth-of-type(2) section div a {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: var(--text-color);
+}
+
+section:nth-of-type(2) section div a span {
+    transform: skewX(20deg);
+    display: inline-block;
+    font-size: var(--a-text-size);
+    font-family: var(--main-text-font-family);
+    font-weight: var(--a-text-weight);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+section:nth-of-type(2) section img:first-of-type {
+    width: 4.5em;
+    height: auto;
+    order: -8;
+    position: relative;
+    transform: skewy(10deg);
+    margin-top: 2em;
+}
+
+section:nth-of-type(2) section img:last-of-type {
+    position: relative;
+    width: 200%;
+    height: auto;
+    left: -8.5em;
+    overflow: hidden;
+    order: -10;
+    padding: 0;
+    transform: skewy(10deg);
+}
 
 section:nth-of-type(2) ul {
     display: flex;
-    padding: 0;
+    padding: 0 2em;
     list-style-type: none;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 1.2em;
     /* Ruitme tussen de elementen en de scroll balk  */
     padding-bottom: 2em;
+
 }
 
 
@@ -117,6 +239,8 @@ section:nth-of-type(2) ul li img {
     width: 11em;
     height: auto;
     order: -1;
+    /*bron voor box-shadow https://www.w3schools.com/css/css3_shadows_box.asp */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 

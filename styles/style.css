@@ -20,9 +20,8 @@
 /*********************/
 :root {
 	/* startje */
-	--color-text: #111;
-	--color-background: #eee;
 	--background-color: #202020;
+	--section-background: #181414;
 	--text-color: white;
 
 	--sub-text-font-family: 'Roboto Condensed', sans-serif;
@@ -46,6 +45,11 @@
 	--thumbnail-text-size: 0.6875em;
 	/* 11px rounded to 0.6875em */
 	--thumbnail-text-weight: bold;
+
+	--a-text-font-family: 'Roboto', sans-serif;
+	--a-text-color: white;
+	--a-text-size: 14px;
+	--a-text-weight: bold;
 
 
 
