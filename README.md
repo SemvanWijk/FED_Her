@@ -74,14 +74,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
-  ### de hele pagina: 
+  ### hele pagina Home: 
   <img src="./readme-images/home_breakdown.pdf" width="375px" alt="breakdown van de hele pagina">
 
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  ### hele pagina Characters): 
+  <img src="./readme-images/characters_breakdown.pdf" width="375px" alt="breakdown van een dynamisch deel">
 
 </details>
 
@@ -214,13 +211,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Ik heb geleerd om te werken met carousellen, checkboxes en op-pagina navigatie:
+  <img src="readme-images/carousel.png" width="375px" alt="top">
+  <img src="readme-images/checkbox.png" width="375px" alt="top">
+  <img src="readme-images/nav.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Het is me niet gelukt om de op-pagina naviagtie op de plek te zetten waar ik die wilde en om de huidige sectie een kleur te geven: 
+  <img src="readme-images/nav.png" width="375px" alt="bummer">
+  <img src="readme-images/nav_voorbeeld.png" width="375px" alt="bummer">
+  
+  Ook had ik moeite met deze specifieke afbeelding en de sectie die gedraait is aan de bovenkant:
+  <img src="readme-images/vervelende_afbeelding.png" width="375px" alt="bummer">
 </details>
 
 
