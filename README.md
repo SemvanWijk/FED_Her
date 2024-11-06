@@ -236,8 +236,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
+  1. https://www.w3schools.com/css/css3_shadows_box.asp
+  2. https://chatgpt.com/share/672a2c8c-a6d0-8003-97bd-cf750a9b327f
   3. ...
 
 </details>
