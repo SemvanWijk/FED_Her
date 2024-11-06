@@ -83,6 +83,7 @@ body {
 	font-family: var(--font-roboto);
 	background-color: var(--color-white);
 	overflow-x: hidden;
+	color: var(--color-black);
 }
 
 
@@ -425,6 +426,10 @@ footer ul:nth-of-type(4) li {
 
 
 /* @media (prefers-color-scheme: dark) {
+
+	body{
+		color: var(--text-color);
+	}
 
 	:root {
 		--color-white: #1c1c1c;
