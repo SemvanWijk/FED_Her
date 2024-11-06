@@ -77,8 +77,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### hele pagina Home: 
   <img src="./readme-images/home_breakdown.pdf" width="375px" alt="breakdown van de hele pagina">
 
-  ### hele pagina Characters): 
-  <img src="./readme-images/characters_breakdown.pdf" width="375px" alt="breakdown van een dynamisch deel">
+  ### hele pagina Characters: 
+  <img src="./readme-images/characters_breakdown.pdf" width="375px" alt="breakdown van de hele pagina">
 
 </details>
 
@@ -159,6 +159,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  - correcte html structuur
+  - Duidelijke focus 
+  - Heading zijn toegepast
+  - Geen autoplay
+  - Media kan gepauzeerd worden
+  - Dark mode is aanwezig
 
 </details>
 
@@ -205,6 +211,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
+
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
 
 

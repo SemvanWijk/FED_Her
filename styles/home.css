@@ -537,7 +537,7 @@ section:nth-of-type(4) ul::-webkit-scrollbar {
 }
 
 section:nth-of-type(4) ul::-webkit-scrollbar-thumb {
-    background-color: #e62429; /* Keep this as a specific color */
+    background-color: var(--marvel-red);
 }
 
 section:nth-of-type(4) li {
@@ -556,13 +556,9 @@ section:nth-of-type(4) li p {
 }
 
 section:nth-of-type(4) input[type="radio"] {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 0.0625em;
-    overflow: hidden;
+    appearance: none;
     position: absolute;
-    white-space: nowrap;
-    width: 0.0625em;
+    
 }
 
 section:nth-of-type(4) label {
